@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/newsDetail"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/newsImage"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"
+        android:foreground="@drawable/shadow_overlay"
+        android:src="@drawable/news2" />
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Back"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:tint="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/tvCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/newsImage"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="-50dp"
+        android:background="@drawable/rounded_category_bg"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="6dp"
+        android:text="Technology"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvCategory"
+        android:layout_above="@id/footerLayout"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newsImage"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No, staring at a screen won’t damage your eyes"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/calendar" />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="Sun 9 March, 2025"
+                    android:textColorLink="#0F0E0E"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:lineSpacingExtra="4dp"
+                android:text="I’m here to quell your health concerns: staring at a screen doesn’t damage your eyes. They won’t make you go blind, and your doctor isn’t going to worry about your health if he or she hears that you’re spending a lot of time in front of them. However, you might feel uncomfortable after a long time in front of a won’t make you go blind, and your doctor isn’t going to worry about your health if he or she hears that you’re spe15knding a lot of time in front I’m here to quell your health concerns: staring at a screen doesn’t damage your eyes. They won’t make you go blind, and your doctor isn’t going to worry about your health if he or she hears that you’re spending a lot of time in front of them. However, you might feel uncomfortable after a long time in front of a won’t make you go blind, and your doctor isn’t going to worry about your health if he or she hears that you’re spe15knding a lot of time in front
+I’m here to quell your health concerns: staring at a screen doesn’t damage your eyes. They won’t make you go blind, and your doctor isn’t going to worry about your health if he or she hears that you’re spending a lot of time in front of them. However, you might feel uncomfortable after a long time in front of a won’t make you go blind, and your doctor isn’t going to worry about your health if he or she hears that you’re spe15knding a lot of time in front I’m here to quell your health concerns: staring at a screen doesn’t damage your eyes. They won’t make you go blind, and your doctor isn’t going to worry about your health if he or she hears that you’re spending a lot of time in front of them. However, you might feel uncomfortable after a long time in front of a won’t make you go blind, and your doctor isn’t going to worry about your health if he or she hears that you’re spe15knding a lot of time in front "
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        android:elevation="4dp"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/btnComment"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/chat"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/tvTotalComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <ImageView
+                android:id="@+id/btnShare"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/share"
+                android:layout_marginEnd="16dp"/>
+
+            <ImageView
+                android:id="@+id/btnBookmark"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/bookmark"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
